@@ -1,0 +1,27 @@
+{
+  "name": "etica",
+  "version": "0.1.0",
+  "description": "Scrape the Etica Soluzioni portal for parents to mine user data. Requires a valid login for the web application.",
+  "main": "client.js",
+  "scripts": {
+    "start": "node client.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zmoog/etica.git"
+  },
+  "author": "Maurizio Branca",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "lodash": "^4.17.4",
+    "numeral": "^2.0.4",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "async": "^2.3.0",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
+  }
+}

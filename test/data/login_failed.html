@@ -1,0 +1,215 @@
+
+
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <link href="css/principale.css" rel="stylesheet" type="text/css" />
+    
+    <title>Login</title>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <link href="css/templatenoheader.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
+        }({
+            instrumentationKey: "cf19d388-f70c-4e07-9bd7-0bdaab87271f"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+
+    <script>
+        //$(function () {
+        //    $('[data-toggle="popover"]').popover()
+        //})
+        $(function () {
+            $("[data-toggle=popover]").popover({
+                html: true,
+                content: function () {
+                    var content = $(this).attr("data-popover-content");
+                    return $(content).children(".popover-body").html();
+                },
+                title: function () {
+                    var title = $(this).attr("data-popover-content");
+                    return $(title).children(".popover-heading").html();
+                }
+            });
+            $(document).on('hidden.bs.modal', function (e) {
+                $(e.target).removeData('bs.modal');
+            });
+        });
+    </script>
+    <style>
+        .modalBox {
+            margin: 150px;
+            width: 800px;
+        }
+
+        .msg {
+            width: 150px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body class="corpoLoginPportaleGen" style="overflow-x:hidden;">
+    <form name="formGestPrincipale" method="post" action="login.aspx" id="formGestPrincipale" class="corpoLoginPportaleGen">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE1NDExNTc5OQ9kFgICAQ9kFgYCAw8WAh4JaW5uZXJodG1sBRNDb211bmUgZGkgVmVyb2xlbmdvZAINDxYCHgdWaXNpYmxlZxYCAgEPDxYCHgRUZXh0BTE8Yj5FcnJvcmUgY29kaWNlIGUgcGFzc3dvcmQgbm9uIHJpY29ub3NjaXV0aS48L2I+ZGQCFw8PFgIeBUxhYmVsBQ1Db2RpY2UgVXRlbnRlZGRk7ofSR9Fitlyy4tI4UZk8CntSDz4=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3A0B800C" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCALFj7LaBwKl1bKzCQK1qbSRCwKRxbuxBwKgt7D9CgL40vq4BQKmq+joCALzyPjaAvc2tJCAImBJgGFbNSVQdQj8oXTt" />
+</div>
+       
+        <span id="lblMex" class="controlliLblMexLoginPG" style="color:Red;border-color:Black;font-size:Medium;"></span>
+
+        <div class="row" style="margin-top: 5px;"></div>
+        <div class="jumbotron" style="background: url('immagini/sfondo.jpg') no-repeat center center; background-size: 100% 250%;margin-top:-30px;">
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4" style="text-align: center; background: rgba(50,50,20,0.4);">
+                    
+                    <h1 style="color: white;font-size:45px;">Portale Genitori</h1>
+                    <h2 id="nomeComune" style="color: white;">Comune di Verolengo</h2>
+                    <h3 style="color: white;">Login</h3>
+
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-5">
+                </div>
+                <div class="col-lg-2" style="text-align: center;">
+                    <div class="input-group" style="text-align: center; width: 100%;">
+                        <span class="input-group-addon " id="basic-addon1" style="width: 65px;">Codice:</span>
+                        <input name="txtUserName" type="text" value="359" id="txtUserName" title="Codice Utente" class="form-control" placeholder="C. Utente" />
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+
+            <div class="row" style="margin-top: 3px;"></div>
+
+            <div class="row">
+                <div class="col-lg-5">
+                </div>
+                <div class="col-lg-2" style="text-align: center;">
+                    <div class="input-group" style="text-align: center; width: 100%;">
+                        <span class="input-group-addon " id="basic-addon1" style="width: 50px;">Password:</span>
+                        <input name="txtPassword" type="password" id="txtPassword" class="form-control" placeholder="Password" />
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+
+            <div class="row" style="margin-top: 10px;"></div>
+
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6" style="text-align: center;">
+                    <input type="submit" name="btnAccedi" value="Accedi" id="btnAccedi" class="btn bgGrey" style="width:100px;" />
+                    <input type="submit" name="btnReset" value="Reset" id="btnReset" class="btn bgGrey" style="width:100px;" />
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+
+             
+            
+
+                
+                
+
+            
+        
+
+            <div class="row" style="margin-top: 10px;"></div>
+
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4" style="text-align: center;">
+                    <div id="divErrori" class="alert alert-danger" role="alert">
+                        <span id="lblErroreLogin"><b>Errore codice e password non riconosciuti.</b></span>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6" style="text-align: center;">
+                    
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6" style="text-align: center;">
+                    
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6" style="text-align: center;">
+                <button type="button" class="btnLogin " style="width: 230px;" data-toggle="modal" data-target=".bs-example-modal-sm">Hai Dimenticato la password?</button>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row" style="margin-top: 5px;"></div>
+
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6" style="text-align: center;">
+                <input type="submit" name="btnRecuperaCodice" value="Hai Dimenticato il codice?" id="btnRecuperaCodice" class="btnLogin " style="width:230px;" />
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+
+        <br />
+        
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <br />
+                    <table class='controlli inline' border='0' ><tr><td><span>Codice Utente</span></td></tr><tr><td><input name="txtCodicePswDimenticata" type="text" id="txtCodicePswDimenticata" /></td></tr></table>
+                    <br />
+                    <br />
+                    <input type="submit" name="btnRipristinaLogin" value="Conferma" id="btnRipristinaLogin" style="margin-left: 5%;" />
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        
+        <br />
+        
+    </form>
+</body>
+</html>
