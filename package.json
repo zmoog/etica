@@ -2,7 +2,7 @@
   "name": "etica",
   "version": "0.1.0",
   "description": "Scrape the Etica Soluzioni portal for parents to mine user data. Requires a valid login for the web application.",
-  "main": "client.js",
+  "main": "index.js",
   "scripts": {
     "start": "node client.js",
     "test": "mocha"
