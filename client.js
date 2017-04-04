@@ -4,10 +4,10 @@ var username = process.env.ETICA_USERNAME;
 var password = process.env.ETICA_PASSWORD;
 
 
-etica.load(username, password, function(err, data) {
+etica.scrape(username, password, function(err, data) {
 
 	if (err) {
-		console.err('Failed', err);
+		console.log('Failed', err);
 	} else {
 		console.log('data: ', data);
 	}

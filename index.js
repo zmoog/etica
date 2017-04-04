@@ -13,7 +13,7 @@ var LOCATION_HEADER_AFTER_SUCCESSFUL_LOGIN = '/verolengoportalegen/default.aspx'
 var defaultForm = require('./default-form.json');
 
 
-module.exports.load = function(username, password, callback) {
+module.exports.scrape = function(username, password, callback) {
 
     var form = _.defaults({txtUserName: username, txtPassword: password}, defaultForm);
 
